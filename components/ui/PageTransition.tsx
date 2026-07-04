@@ -6,16 +6,13 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const pathname = usePathname()
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.main
-        key={pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      >
-        {children}
-      </motion.main>
-    </AnimatePresence>
+    <motion.main
+      key={pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.35, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.main>
   )
 }
