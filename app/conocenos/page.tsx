@@ -19,7 +19,7 @@ const values = [
 
 export default function ConocenosPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
@@ -70,7 +70,7 @@ export default function ConocenosPage() {
       </section>
 
       {/* Values */}
-      <section className="py-32 px-6 bg-[#F5F0E8]">
+      <section className="py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-4 text-center">Lo que nos guía</p>

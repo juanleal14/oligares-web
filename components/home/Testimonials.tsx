@@ -30,7 +30,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section className="py-32 px-6 bg-[#F5F0E8]">
+    <section className="py-32 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
         <FadeIn>
           <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-16">Lo que dicen de nosotros</p>

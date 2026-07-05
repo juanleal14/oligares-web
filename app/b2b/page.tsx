@@ -9,35 +9,35 @@ const envases = [
     name: 'Garrafas',
     description: 'Envase más adecuado para mayores cantidades de aceite. Su diseño facilita el manejo y la dosificación, lo que la convierte en una opción práctica tanto para uso doméstico como para restauración o industria.',
     sizes: ['3L', '5L'],
-    image: 'https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80',
+    image: '/images/garrafa-b2b.jpg',
   },
   {
     id: 'botella-vidrio',
     name: 'Botella de Vidrio',
     description: 'Las botellas de vidrio son muy populares porque protegen el aceite de la luz, lo que contribuye a conservar sus propiedades.',
     sizes: ['100ml', '250ml', '500ml', '1L'],
-    image: 'https://images.unsplash.com/photo-1601039641847-7857b994d704?w=800&q=80',
+    image: '/images/botella-vidrio-b2b.jpg',
   },
   {
     id: 'botella-plastico',
     name: 'Botella de Plástico',
     description: 'Este tipo de botella es más resistente y suele resultar más económica.',
     sizes: ['100ml', '250ml', '500ml', '750ml', '1L'],
-    image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80',
+    image: '/images/botella-plastico-b2b.png',
   },
   {
     id: 'latas',
     name: 'Latas de Metal',
     description: 'Comunes para aceites de mayor volumen. Ofrecen protección contra la luz y son resistentes a impactos.',
     sizes: ['100ml', '250ml', '500ml', '1L', '3L'],
-    image: 'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=800&q=80',
+    image: '/images/latas-b2b.jpg',
   },
   {
     id: 'estuche',
     name: 'Estuche de Catas',
     description: 'Presentación premium con nuestras principales variedades en formato degustación. Pensado para amantes del AOVE, chefs y el regalo definitivo para los más exigentes.',
     sizes: ['Pack degustación'],
-    image: 'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=800&q=80',
+    image: '/images/estuche-b2b.png',
   },
 ]
 
@@ -45,7 +45,7 @@ export default function B2BPage() {
   const [active, setActive] = useState(0)
 
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <div className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center scale-110" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1920&q=80')` }} />
@@ -89,7 +89,10 @@ export default function B2BPage() {
               className="grid md:grid-cols-2 gap-16 items-center"
             >
               <div className="relative h-[500px] overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${envases[active].image}')` }} />
+                <div
+                  className={`absolute inset-0 bg-center ${envases[active].id === 'garrafa' ? 'bg-contain bg-no-repeat' : 'bg-cover'}`}
+                  style={{ backgroundImage: `url('${envases[active].image}')` }}
+                />
               </div>
               <div>
                 <div className="w-8 h-px bg-[#a3af74] mb-8" />

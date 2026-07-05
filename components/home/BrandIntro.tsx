@@ -30,21 +30,16 @@ const stats = [
 
 export default function BrandIntro() {
   return (
-    <section className="py-32 px-6 bg-[#F5F0E8]">
+    <section className="py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-        {/* Image */}
         <FadeIn direction="left">
           <div className="relative">
-            <div
-              className="w-full h-[600px] bg-cover bg-center"
-              style={{ backgroundImage: `url('https://images.unsplash.com/photo-1601039641847-7857b994d704?w=900&q=80')` }}
-            />
+            <div className="w-full h-[600px] bg-cover bg-center" style={{ backgroundImage: `url('/images/hero-campo.jpg')` }} />
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#a3af74]/20 -z-10" />
             <div className="absolute -top-6 -left-6 w-24 h-24 border border-[#a3af74]/30" />
           </div>
         </FadeIn>
 
-        {/* Text */}
         <div>
           <FadeIn delay={0.1}>
             <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-6">Sobre nosotros</p>
@@ -69,7 +64,6 @@ export default function BrandIntro() {
             </p>
           </FadeIn>
 
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-8 pt-12 border-t border-[#1C1C1A]/10">
             {stats.map(({ value, suffix, label }) => (
               <FadeIn key={label} delay={0.5}>

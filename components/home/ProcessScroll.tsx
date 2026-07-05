@@ -25,7 +25,7 @@ const steps = [
     number: '04',
     title: 'Embotellado y trazabilidad',
     description: 'Cada lote se filtra, analiza y embotella con número de cosecha. Desde el árbol hasta tu mesa, sabemos exactamente de dónde viene cada gota de aceite que llega a tus manos.',
-    image: 'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=1200&q=80',
+    image: '/images/garrafa-5l.png',
   },
 ]
 
@@ -43,10 +43,9 @@ export default function ProcessScroll() {
 
   return (
     <section ref={containerRef} className="relative" style={{ height: `${steps.length * 100}vh` }}>
-      {/* Sticky container */}
-      <div className="sticky top-0 h-screen overflow-hidden bg-[#1C1C1A] flex">
+      <div className="sticky top-0 h-screen overflow-hidden bg-white flex">
         {/* Left: image */}
-        <div className="w-1/2 relative">
+        <div className="w-1/2 relative bg-white">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -56,18 +55,13 @@ export default function ProcessScroll() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1C1C1A]/50" />
         </div>
 
         {/* Right: content */}
-        <div className="w-1/2 flex flex-col justify-center px-16 relative">
-          {/* Step counter */}
+        <div className="w-1/2 flex flex-col justify-center px-16 relative bg-white">
           <div className="absolute top-12 left-16 flex gap-2">
             {steps.map((_, i) => (
-              <div
-                key={i}
-                className={`h-px transition-all duration-500 ${activeStep === i ? 'w-10 bg-[#a3af74]' : 'w-4 bg-white/20'}`}
-              />
+              <div key={i} className={`h-px transition-all duration-500 ${activeStep === i ? 'w-10 bg-[#a3af74]' : 'w-4 bg-[#1C1C1A]/20'}`} />
             ))}
           </div>
 
@@ -76,7 +70,6 @@ export default function ProcessScroll() {
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              className="absolute"
               animate={{
                 opacity: activeStep === i ? 1 : 0,
                 y: activeStep === i ? 0 : activeStep > i ? -40 : 40,
@@ -84,9 +77,9 @@ export default function ProcessScroll() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               style={{ position: activeStep === i ? 'relative' : 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
             >
-              <span className="font-serif text-8xl text-white/5 select-none absolute -top-8 -left-4">{step.number}</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 relative z-10">{step.title}</h2>
-              <p className="text-white/50 leading-relaxed text-lg max-w-md relative z-10">{step.description}</p>
+              <span className="font-serif text-8xl text-[#1C1C1A]/5 select-none absolute -top-8 -left-4">{step.number}</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#1C1C1A] mb-6 relative z-10">{step.title}</h2>
+              <p className="text-[#1C1C1A]/50 leading-relaxed text-lg max-w-md relative z-10">{step.description}</p>
             </motion.div>
           ))}
         </div>

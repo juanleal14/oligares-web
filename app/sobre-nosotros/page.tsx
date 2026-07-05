@@ -57,12 +57,12 @@ const whyUs = [
 
 export default function SobreNosotrosPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-110"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1601039641847-7857b994d704?w=1920&q=80')` }}
+          style={{ backgroundImage: `url('/images/sobre-nosotros.jpg')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C1A]/70 to-[#1C1C1A]/30" />
         <div className="relative z-10 text-center px-6">
@@ -79,13 +79,13 @@ export default function SobreNosotrosPage() {
       </div>
 
       {/* Misión & Visión */}
-      <section className="py-32 px-6 bg-[#1C1C1A]">
+      <section className="py-32 px-6 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
           {sections.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.15}>
-              <div>
+              <div className="p-10 border border-[#a3af74]/40 hover:border-[#a3af74] transition-colors duration-500">
                 <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-6">{s.title}</p>
-                <p className="text-white/70 leading-relaxed text-lg">{s.content}</p>
+                <p className="text-[#1C1C1A]/70 leading-relaxed text-lg">{s.content}</p>
               </div>
             </FadeIn>
           ))}
@@ -93,7 +93,7 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* ¿Por qué Oligares? */}
-      <section className="py-32 px-6 bg-[#F5F0E8]">
+      <section className="py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-4 text-center">Nuestros valores</p>

@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { type Product } from '@/data/products'
 
 const placeholderImages: Record<string, string> = {
-  'garrafa-picual': '/images/garrafa-5l.png',
-  'botella-picual-500': '/images/botella-500ml.png',
+  'garrafa-picual': '/images/garrafa-b2b.jpg',
+  'botella-picual-500': '/images/botella-vidrio-b2b.jpg',
   'botella-cosecha-temprana-500': '/images/botella-500ml.png',
   'botella-cosecha-temprana-100': '/images/botella-500ml.png',
 }
@@ -23,9 +23,9 @@ export default function ProductCard({ product }: { product: Product }) {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Image */}
-      <div className="relative h-80 overflow-hidden bg-[#E8DEC8]">
+      <div className="relative h-80 overflow-hidden bg-white">
         <motion.div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: `url('${placeholderImages[product.id]}')` }}
           animate={{ scale: hovered && !product.soldOut ? 1.06 : 1 }}
           transition={{ duration: 0.6 }}
@@ -33,10 +33,8 @@ export default function ProductCard({ product }: { product: Product }) {
 
         {/* Sold out overlay */}
         {product.soldOut && (
-          <div className="absolute inset-0 bg-[#1C1C1A]/50 flex items-center justify-center">
-            <span className="text-white text-sm tracking-widest uppercase border border-white px-6 py-3">
-              {product.soldOutMessage}
-            </span>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img src="/images/sold-out.png" alt="Stock agotado" className="w-full h-full object-cover" />
           </div>
         )}
 

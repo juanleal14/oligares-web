@@ -31,7 +31,7 @@ export default function FeaturedProducts() {
           {featured.map((product, i) => (
             <FadeIn key={product.id} delay={i * 0.1}>
               <motion.div
-                className="group relative bg-[#F5F0E8] overflow-hidden"
+                className="group relative bg-white overflow-hidden"
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               >

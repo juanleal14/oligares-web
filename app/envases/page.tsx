@@ -39,7 +39,7 @@ const envases = [
 
 export default function EnvasesPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div
