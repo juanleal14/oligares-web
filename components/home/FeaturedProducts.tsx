@@ -7,10 +7,10 @@ import FadeIn from '@/components/ui/FadeIn'
 const featured = products
 
 const productImages: Record<string, string> = {
-  'garrafa-picual': 'https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=600&q=80',
-  'botella-picual-500': 'https://images.unsplash.com/photo-1601039641847-7857b994d704?w=600&q=80',
-  'botella-cosecha-temprana-500': 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&q=80',
-  'botella-cosecha-temprana-100': 'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=600&q=80',
+  'garrafa-picual': '/images/garrafa-5l.png',
+  'botella-picual-500': '/images/botella-500ml.png',
+  'botella-cosecha-temprana-500': '/images/botella-500ml.png',
+  'botella-cosecha-temprana-100': '/images/botella-500ml.png',
 }
 
 export default function FeaturedProducts() {

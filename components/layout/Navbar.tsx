@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const links = [
   { href: '/', label: 'Inicio' },
@@ -27,15 +28,15 @@ export default function Navbar() {
     <>
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'py-3 backdrop-blur-md bg-[#1C1C1A]/80 shadow-lg' : 'py-6 bg-transparent'
+          scrolled ? 'py-3 bg-[#a3af74] shadow-lg' : 'py-6 bg-[#a3af74]'
         }`}
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="font-serif text-2xl tracking-widest text-[#a3af74] uppercase">
-            Oligares
+          <Link href="/">
+            <Image src="/images/logo.png" alt="Oligares" width={140} height={50} className="h-10 w-auto" />
           </Link>
 
           {/* Desktop */}
@@ -45,11 +46,11 @@ export default function Navbar() {
                 <Link
                   href={href}
                   className={`text-sm tracking-widest uppercase transition-colors duration-300 relative group ${
-                    pathname === href ? 'text-[#a3af74]' : scrolled ? 'text-white/80 hover:text-[#a3af74]' : 'text-white/80 hover:text-[#a3af74]'
+                    pathname === href ? 'text-white font-semibold' : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {label}
-                  <span className={`absolute -bottom-1 left-0 h-px bg-[#a3af74] transition-all duration-300 ${pathname === href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                  <span className={`absolute -bottom-1 left-0 h-px bg-white transition-all duration-300 ${pathname === href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </Link>
               </li>
             ))}
