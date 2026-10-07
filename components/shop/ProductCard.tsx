@@ -16,7 +16,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <motion.div
-      className={`group bg-white flex flex-col ${product.soldOut ? 'opacity-75' : ''}`}
+      className="group bg-white flex flex-col"
       style={{ boxShadow: hovered && !product.soldOut ? '0 8px 40px rgba(163,175,116,0.22)' : '0 2px 16px rgba(0,0,0,0.10)', border: '1px solid rgba(163,175,116,0.25)' }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
@@ -56,11 +56,11 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="p-7 flex flex-col flex-1">
         <p className="text-[10px] text-[#a3af74] tracking-[0.35em] uppercase mb-3">{product.variety}</p>
         <h3 className="font-serif text-xl text-[#1C1C1A] mb-3 leading-snug">{product.name}</h3>
-        <p className="text-[#1C1C1A]/45 text-sm leading-relaxed flex-1">{product.description}</p>
+        <p className="text-[#1C1C1A]/90 text-sm leading-relaxed flex-1">{product.description}</p>
 
         <div className="flex items-center justify-between mt-8 pt-6 border-t border-[#1C1C1A]/8">
           <div>
-            <p className="text-[9px] text-[#1C1C1A]/30 tracking-widest uppercase mb-1">Precio</p>
+            <p className="text-[9px] text-[#1C1C1A]/90 tracking-widest uppercase mb-1">Precio</p>
             <span className="font-serif text-2xl text-[#1C1C1A]">
               {product.price ? `€${product.price.toFixed(2)}` : '—'}
             </span>

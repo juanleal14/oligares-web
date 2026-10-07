@@ -13,7 +13,7 @@ export default function ContactCTA() {
   }
 
   return (
-    <section className="py-32 px-6 bg-[#a3af74]">
+    <section className="pt-16 pb-32 px-6 bg-[#a3af74]">
       <div className="max-w-2xl mx-auto text-center">
         <FadeIn>
           <p className="text-white/70 text-xs tracking-[0.4em] uppercase mb-6">Contacto</p>

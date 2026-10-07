@@ -3,7 +3,6 @@ import { Playfair_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import CustomCursor from '@/components/ui/CustomCursor'
 import PageTransition from '@/components/ui/PageTransition'
 
 const playfair = Playfair_Display({
@@ -27,7 +26,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${playfair.variable} ${dmSans.variable}`}>
       <body>
-        <CustomCursor />
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />

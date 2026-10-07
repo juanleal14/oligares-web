@@ -25,7 +25,7 @@ const whyUs = [
     title: 'Una dieta sana',
     content: (
       <>
-        <strong>OLIGARES</strong> no es solo un aceite, es parte de la Dieta Mediterránea. Cada gota aporta antioxidantes, vitaminas y grasas saludables que cuidan el organismo, mientras realza cualquier plato. Comer bien es vivir mejor, y con <strong>OLIGARES</strong>, la salud empieza en la mesa.
+        OLIGARES <strong>no es solo un aceite</strong> , es parte de la Dieta Mediterránea. Cada gota aporta antioxidantes, vitaminas y grasas saludables que cuidan el organismo, mientras realza cualquier plato. Comer bien es vivir mejor, y con <strong>OLIGARES</strong>, la salud empieza en la mesa.
       </>
     ),
   },
@@ -46,10 +46,10 @@ const whyUs = [
     ),
   },
   {
-    title: '100% Sabor',
+    title: 'Sabor',
     content: (
       <>
-        En OLIGARES sabemos que el sabor es la esencia de todo. Por eso contamos con <strong>10 variedades</strong> de AOVE, <strong>ecológico</strong> y <strong>2 cosechas tempranas</strong> que despiertan los sentidos: suaves y delicados para los paladares más sutiles, intensos y profundos para quienes buscan carácter y autenticidad.
+        En OLIGARES sabemos que el sabor es la esencia de todo. Por eso contamos con <strong>10 variedades</strong> de AOVE, <strong>ecológico</strong> y <strong>2 cosechas tempranas</strong> que despiertan los sentidos: suaves y delicados para los paladares más sutiles, intensos y profundos para quienes buscan carácter.
       </>
     ),
   },
@@ -66,7 +66,7 @@ export default function SobreNosotrosPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C1A]/70 to-[#1C1C1A]/30" />
         <div className="relative z-10 text-center px-6">
-          <motion.p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.p className="text-[#8a9660] font-semibold text-xs tracking-[0.4em] uppercase mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
             Almería, España
           </motion.p>
           <motion.h1 className="font-serif text-5xl md:text-7xl text-white mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
@@ -79,13 +79,13 @@ export default function SobreNosotrosPage() {
       </div>
 
       {/* Misión & Visión */}
-      <section className="py-32 px-6 bg-white">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
+      <section className="pt-32 pb-12 px-6 bg-white">
+        <div className="max-w-4xl mx-auto divide-y divide-[#1C1C1A]/10">
           {sections.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.15}>
-              <div className="p-10 border border-[#a3af74]/40 hover:border-[#a3af74] transition-colors duration-500">
-                <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-6">{s.title}</p>
-                <p className="text-[#1C1C1A]/70 leading-relaxed text-lg">{s.content}</p>
+              <div className="py-12 grid md:grid-cols-[160px_1fr] gap-6 md:gap-16">
+                <p className="text-[#8a9660] font-semibold text-xs tracking-[0.4em] uppercase">{s.title}</p>
+                <p className="text-[#1C1C1A]/85 leading-relaxed text-lg">{s.content}</p>
               </div>
             </FadeIn>
           ))}
@@ -93,18 +93,18 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* ¿Por qué Oligares? */}
-      <section className="py-32 px-6 bg-white">
+      <section className="pt-12 pb-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-4 text-center">Nuestros valores</p>
+            <p className="text-[#8a9660] font-semibold text-xs tracking-[0.4em] uppercase mb-4 text-center">Nuestros valores</p>
             <h2 className="font-serif text-4xl text-[#1C1C1A] text-center mb-20">¿Por qué Oligares?</h2>
           </FadeIn>
           <div className="grid sm:grid-cols-2 gap-8">
             {whyUs.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
-                <div className="p-10 border border-[#1C1C1A]/10 hover:border-[#a3af74] transition-colors duration-500">
+                <div className="p-10 border border-[#1C1C1A]/25 hover:border-[#a3af74] transition-colors duration-500">
                   <h3 className="font-serif text-2xl text-[#1C1C1A] mb-5">{item.title}</h3>
-                  <p className="text-[#1C1C1A]/60 leading-relaxed">{item.content}</p>
+                  <p className="text-[#1C1C1A]/80 leading-relaxed">{item.content}</p>
                 </div>
               </FadeIn>
             ))}
@@ -116,10 +116,10 @@ export default function SobreNosotrosPage() {
       <section className="pb-32 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&q=80',
-            'https://images.unsplash.com/photo-1601039641847-7857b994d704?w=600&q=80',
-            'https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=600&q=80',
-            'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=600&q=80',
+            '/images/hero-campo.jpg',
+            '/images/garrafa-5l.png',
+            '/images/botella-500ml.png',
+            '/images/inicio-feature.png',
           ].map((img, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="h-64 bg-cover bg-center hover:scale-[1.02] transition-transform duration-500" style={{ backgroundImage: `url('${img}')` }} />

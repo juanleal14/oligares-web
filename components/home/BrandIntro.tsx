@@ -30,7 +30,7 @@ const stats = [
 
 export default function BrandIntro() {
   return (
-    <section className="py-32 px-6 bg-white">
+    <section className="pt-32 pb-16 px-6 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
         <FadeIn direction="left">
           <div className="relative">

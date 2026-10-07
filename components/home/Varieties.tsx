@@ -9,21 +9,18 @@ const varieties = [
     tagline: 'Intensidad y carácter',
     description: 'La variedad más plantada de España. Frutado intenso, con notas de tomate, hierba fresca y un picante elegante que persiste en el paladar. Alta en polifenoles, de extraordinaria estabilidad.',
     aroma: ['Tomate verde', 'Hierba fresca', 'Almendra'],
-    image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80',
   },
   {
     name: 'Verdeja',
     tagline: 'Delicadeza floral',
     description: 'Variedad autóctona y casi desconocida fuera de Almería. Suave, aromática, con notas florales y almendradas que la hacen única. Una joya del olivar andaluz que cultivamos con especial esmero.',
     aroma: ['Flor de azahar', 'Almendra dulce', 'Manzana'],
-    image: 'https://images.unsplash.com/photo-1601039641847-7857b994d704?w=800&q=80',
   },
   {
     name: 'Arbequina',
     tagline: 'Suavidad y equilibrio',
     description: 'La variedad favorita para quienes se inician en el mundo del AOVE. Frutado suave, notas de almendra y manzana, con un amargor y picante muy ligeros. Perfecta para ensaladas y postres.',
     aroma: ['Manzana madura', 'Plátano', 'Hierba dulce'],
-    image: 'https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80',
   },
 ]
 
@@ -31,7 +28,7 @@ export default function Varieties() {
   const [active, setActive] = useState(0)
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
+    <section className="pt-16 pb-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn>
           <p className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-4 text-center">Nuestras variedades</p>
@@ -77,19 +74,10 @@ export default function Varieties() {
             ))}
           </div>
 
-          <div className="relative h-[500px] overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${varieties[active].image}')` }}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </AnimatePresence>
-          </div>
+          <div
+            className="relative h-[500px] overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: `url('/images/inicio-feature.png')` }}
+          />
         </div>
       </div>
     </section>

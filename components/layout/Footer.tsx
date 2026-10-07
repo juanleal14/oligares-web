@@ -27,15 +27,15 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3">
               <Mail size={14} className="text-[#a3af74]" />
-              <a href="mailto:info@oligares.com" className="hover:text-white transition-colors">info@oligares.com</a>
+              <a href="mailto:oligaresaove@gmail.com" className="hover:text-white transition-colors">oligaresaove@gmail.com</a>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={14} className="text-[#a3af74]" />
-              <span>+34 000 000 000</span>
+              <span>+34 616 015 265</span>
             </li>
             <li className="flex items-center gap-3">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#a3af74]"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-              <a href="https://instagram.com/oligares" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@oligares</a>
+              <a href="https://instagram.com/oligares_aove" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@oligares_aove</a>
             </li>
           </ul>
         </div>

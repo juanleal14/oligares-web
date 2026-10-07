@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 pt-28 max-w-5xl mx-auto">
         <motion.p
           className="text-[#a3af74] text-xs tracking-[0.4em] uppercase mb-8"
           initial={{ opacity: 0 }}
